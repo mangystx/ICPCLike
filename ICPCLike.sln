@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICPCLike", "ICPCLike\ICPCLike.csproj", "{82CD2CD1-B55A-48E1-9726-E3EF7AE0FFEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICPCLike.Db", "ICPCLike.Db\ICPCLike.Db.csproj", "{DA13C54E-4304-4181-9422-842089E495E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICPCLIke.Services", "ICPCLIke.Services\ICPCLIke.Services.csproj", "{3383A400-BEA5-4BF0-AE92-66CEEF4A59FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{82CD2CD1-B55A-48E1-9726-E3EF7AE0FFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82CD2CD1-B55A-48E1-9726-E3EF7AE0FFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82CD2CD1-B55A-48E1-9726-E3EF7AE0FFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA13C54E-4304-4181-9422-842089E495E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA13C54E-4304-4181-9422-842089E495E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA13C54E-4304-4181-9422-842089E495E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA13C54E-4304-4181-9422-842089E495E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3383A400-BEA5-4BF0-AE92-66CEEF4A59FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3383A400-BEA5-4BF0-AE92-66CEEF4A59FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3383A400-BEA5-4BF0-AE92-66CEEF4A59FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3383A400-BEA5-4BF0-AE92-66CEEF4A59FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
