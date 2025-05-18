@@ -16,7 +16,7 @@ public class Team
 	[Column("organization_id")]
 	public int? OrganizationId { get; set; }
 
-	[ForeignKey("organizationId")]
+	[ForeignKey(nameof(OrganizationId))]
 	public Organization? Organization { get; set; }
 
 	[Column("hidden")]

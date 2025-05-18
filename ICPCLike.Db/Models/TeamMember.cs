@@ -13,13 +13,13 @@ public class TeamMember
 	[Column("team_id")]
 	public int TeamId { get; set; }
 
-	[ForeignKey("teamId")]
+	[ForeignKey(nameof(TeamId))]
 	public Team Team { get; set; }
 
 	[Column("contestant_id")]
 	public int ContestantId { get; set; }
 
-	[ForeignKey("contestantId")]
+	[ForeignKey(nameof(ContestantId))]
 	public Person Contestant { get; set; }
 
 	[Column("join_date")]

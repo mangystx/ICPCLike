@@ -1,4 +1,4 @@
-namespace ICPCLike.Db;
+namespace ICPCLike.Db.Models;
 
 public enum Level
 {

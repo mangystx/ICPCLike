@@ -1,0 +1,231 @@
+@import './base.css';
+
+body {
+  padding: 2rem;
+  background-color: #f9fafb;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  color: #1f2937;
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #f3f4f6;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 16px 20px;
+  white-space: nowrap;
+}
+
+th {
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.table-scroll {
+  max-height: 82vh;
+  overflow-y: auto;
+}
+
+.table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table-scroll thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f3f4f6;
+  z-index: 1;
+}
+
+.query-selector {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.query-selector label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.query-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.query-controls select {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 240px;
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+.query-controls button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.query-controls button:hover {
+  background-color: #1e40af;
+}
+
+.query-result {
+  margin-top: 2rem;
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  overflow-x: auto;
+  max-height: 300px;
+}
+
+.query-result h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.query-result pre {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+.query-inputs {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.query-inputs .field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .query-inputs .field {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .query-inputs .field label {
+    width: 180px;
+  }
+}
+
+.query-inputs label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.query-inputs input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  flex: 1;
+}
+
+.query-inputs input,
+.query-inputs select {
+  max-width: 320px;
+}
+.query-inputs select[multiple] {
+  max-width: 320px;
+  min-height: 120px;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  resize: vertical;
+}
+
+.query-inputs option {
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  cursor: pointer;
+}
+
+.query-inputs option::before {
+  content: '✔';
+  display: inline-block;
+  opacity: 0;
+  margin-right: 8px;
+  color: #10b981;
+}
+
+.query-inputs select[multiple] option:checked::before {
+  opacity: 1;
+}

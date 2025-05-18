@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICPCLike.API", "ICPCLike.AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICPCLike.Db", "ICPCLike.Db\ICPCLike.Db.csproj", "{DA13C54E-4304-4181-9422-842089E495E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICPCLIke.Services", "ICPCLIke.Services\ICPCLIke.Services.csproj", "{3383A400-BEA5-4BF0-AE92-66CEEF4A59FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICPCLike.Services", "ICPCLike.Services\ICPCLike.Services.csproj", "{3383A400-BEA5-4BF0-AE92-66CEEF4A59FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

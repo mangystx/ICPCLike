@@ -13,13 +13,13 @@ public class Result
 	[Column("stage_id")]
 	public int StageId { get; set; }
 
-	[ForeignKey("stageId")]
+	[ForeignKey(nameof(StageId))]
 	public Stage Stage { get; set; }
 
 	[Column("team_id")]
 	public int TeamId { get; set; }
 
-	[ForeignKey("teamId")]
+	[ForeignKey(nameof(TeamId))]
 	public Team Team { get; set; }
 
 	[Column("rank")]

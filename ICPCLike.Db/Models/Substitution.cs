@@ -13,19 +13,19 @@ public class Substitution
 	[Column("team_id")]
 	public int TeamId { get; set; }
 
-	[ForeignKey("teamId")]
+	[ForeignKey(nameof(TeamId))]
 	public Team Team { get; set; }
 
 	[Column("old_contestant_id")]
 	public int OldContestantId { get; set; }
 
-	[ForeignKey("oldContestantId")]
+	[ForeignKey(nameof(OldContestantId))]
 	public Person OldContestant { get; set; }
 
 	[Column("new_contestant_id")]
 	public int NewContestantId { get; set; }
 
-	[ForeignKey("newContestantId")]
+	[ForeignKey(nameof(NewContestantId))]
 	public Person NewContestant { get; set; }
 
 	[Column("substitution_date")]

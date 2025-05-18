@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ICPCLike.Db.Migrations
 {
     [DbContext(typeof(IcpcLikeContext))]
-    [Migration("20250426225942_MigrationName")]
-    partial class MigrationName
+    [Migration("20250517220832_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,6 +57,10 @@ namespace ICPCLike.Db.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("date_of_birth");
+
                     b.Property<string>("Email")
                         .HasColumnType("text")
                         .HasColumnName("email");
@@ -70,9 +74,8 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("text")
                         .HasColumnName("name");
 
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("text")
+                    b.Property<int>("Role")
+                        .HasColumnType("integer")
                         .HasColumnName("role");
 
                     b.Property<string>("Sex")
@@ -117,26 +120,13 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("team_id");
 
-                    b.Property<int>("stage_id")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("team_id")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("stage_id");
+                    b.HasIndex("StageId");
 
-                    b.HasIndex("team_id");
+                    b.HasIndex("TeamId");
 
-                    b.ToTable("results", t =>
-                        {
-                            t.Property("stage_id")
-                                .HasColumnName("stage_id1");
-
-                            t.Property("team_id")
-                                .HasColumnName("team_id1");
-                        });
+                    b.ToTable("results");
                 });
 
             modelBuilder.Entity("ICPCLike.Db.Models.Season", b =>
@@ -179,6 +169,10 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("date");
 
+                    b.Property<int>("Level")
+                        .HasColumnType("integer")
+                        .HasColumnName("level");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text")
@@ -188,18 +182,11 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("season_id");
 
-                    b.Property<int>("season_id")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("season_id");
+                    b.HasIndex("SeasonId");
 
-                    b.ToTable("stages", t =>
-                        {
-                            t.Property("season_id")
-                                .HasColumnName("season_id1");
-                        });
+                    b.ToTable("stages");
                 });
 
             modelBuilder.Entity("ICPCLike.Db.Models.Substitution", b =>
@@ -227,34 +214,15 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("team_id");
 
-                    b.Property<int>("new_contestant_id")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("old_contestant_id")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("team_id")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("new_contestant_id");
+                    b.HasIndex("NewContestantId");
 
-                    b.HasIndex("old_contestant_id");
+                    b.HasIndex("OldContestantId");
 
-                    b.HasIndex("team_id");
+                    b.HasIndex("TeamId");
 
-                    b.ToTable("substitutions", t =>
-                        {
-                            t.Property("new_contestant_id")
-                                .HasColumnName("new_contestant_id1");
-
-                            t.Property("old_contestant_id")
-                                .HasColumnName("old_contestant_id1");
-
-                            t.Property("team_id")
-                                .HasColumnName("team_id1");
-                        });
+                    b.ToTable("substitutions");
                 });
 
             modelBuilder.Entity("ICPCLike.Db.Models.Team", b =>
@@ -279,18 +247,11 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("organization_id");
 
-                    b.Property<int?>("organization_id")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("organization_id");
+                    b.HasIndex("OrganizationId");
 
-                    b.ToTable("teams", t =>
-                        {
-                            t.Property("organization_id")
-                                .HasColumnName("organization_id1");
-                        });
+                    b.ToTable("teams");
                 });
 
             modelBuilder.Entity("ICPCLike.Db.Models.TeamMember", b =>
@@ -318,39 +279,26 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("team_id");
 
-                    b.Property<int>("contestant_id")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("team_id")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("contestant_id");
+                    b.HasIndex("ContestantId");
 
-                    b.HasIndex("team_id");
+                    b.HasIndex("TeamId");
 
-                    b.ToTable("team_members", t =>
-                        {
-                            t.Property("contestant_id")
-                                .HasColumnName("contestant_id1");
-
-                            t.Property("team_id")
-                                .HasColumnName("team_id1");
-                        });
+                    b.ToTable("team_members");
                 });
 
             modelBuilder.Entity("ICPCLike.Db.Models.Result", b =>
                 {
                     b.HasOne("ICPCLike.Db.Models.Stage", "Stage")
                         .WithMany("Results")
-                        .HasForeignKey("stage_id")
+                        .HasForeignKey("StageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ICPCLike.Db.Models.Team", "Team")
                         .WithMany("Results")
-                        .HasForeignKey("team_id")
+                        .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -363,7 +311,7 @@ namespace ICPCLike.Db.Migrations
                 {
                     b.HasOne("ICPCLike.Db.Models.Season", "Season")
                         .WithMany("Stages")
-                        .HasForeignKey("season_id")
+                        .HasForeignKey("SeasonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -374,19 +322,19 @@ namespace ICPCLike.Db.Migrations
                 {
                     b.HasOne("ICPCLike.Db.Models.Person", "NewContestant")
                         .WithMany()
-                        .HasForeignKey("new_contestant_id")
+                        .HasForeignKey("NewContestantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ICPCLike.Db.Models.Person", "OldContestant")
                         .WithMany()
-                        .HasForeignKey("old_contestant_id")
+                        .HasForeignKey("OldContestantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ICPCLike.Db.Models.Team", "Team")
                         .WithMany()
-                        .HasForeignKey("team_id")
+                        .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -401,7 +349,7 @@ namespace ICPCLike.Db.Migrations
                 {
                     b.HasOne("ICPCLike.Db.Models.Organization", "Organization")
                         .WithMany("Teams")
-                        .HasForeignKey("organization_id");
+                        .HasForeignKey("OrganizationId");
 
                     b.Navigation("Organization");
                 });
@@ -410,13 +358,13 @@ namespace ICPCLike.Db.Migrations
                 {
                     b.HasOne("ICPCLike.Db.Models.Person", "Contestant")
                         .WithMany("TeamMemberships")
-                        .HasForeignKey("contestant_id")
+                        .HasForeignKey("ContestantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ICPCLike.Db.Models.Team", "Team")
                         .WithMany("Members")
-                        .HasForeignKey("team_id")
+                        .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

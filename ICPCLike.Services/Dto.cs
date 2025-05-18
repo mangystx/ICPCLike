@@ -23,12 +23,6 @@ public class TeamResultsCountDto
 	public int ResultsCount { get; set; }
 }
 
-public class NameCountDto
-{
-	public string Name { get; set; }
-	public int Count { get; set; }
-}
-
 public class ParticipantResultDto
 {
 	public string Participant { get; set; }

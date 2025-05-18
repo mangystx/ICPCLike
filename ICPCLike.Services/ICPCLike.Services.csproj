@@ -7,4 +7,8 @@
         <RootNamespace>ICPCLIke.Services</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ICPCLike.Db\ICPCLike.Db.csproj" />
+    </ItemGroup>
+
 </Project>

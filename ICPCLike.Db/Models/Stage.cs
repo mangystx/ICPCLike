@@ -22,7 +22,7 @@ public class Stage
 	[Column("season_id")]
 	public int SeasonId { get; set; }
 
-	[ForeignKey("seasonId")]
+	[ForeignKey(nameof(SeasonId))]
 	public Season Season { get; set; }
 
 	public ICollection<Result> Results { get; set; }

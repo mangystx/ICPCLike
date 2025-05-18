@@ -9,10 +9,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ICPCLike.Db\ICPCLike.Db.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Controllers\" />
+      <ProjectReference Include="..\ICPCLike.Services\ICPCLike.Services.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -20,6 +17,7 @@
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
     </ItemGroup>
 
 </Project>

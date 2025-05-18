@@ -117,17 +117,11 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("team_id");
 
-                    b.Property<int>("stageId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("teamId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("stageId");
+                    b.HasIndex("StageId");
 
-                    b.HasIndex("teamId");
+                    b.HasIndex("TeamId");
 
                     b.ToTable("results");
                 });
@@ -185,12 +179,9 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("season_id");
 
-                    b.Property<int>("seasonId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("seasonId");
+                    b.HasIndex("SeasonId");
 
                     b.ToTable("stages");
                 });
@@ -220,22 +211,13 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("team_id");
 
-                    b.Property<int>("newContestantId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("oldContestantId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("teamId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("newContestantId");
+                    b.HasIndex("NewContestantId");
 
-                    b.HasIndex("oldContestantId");
+                    b.HasIndex("OldContestantId");
 
-                    b.HasIndex("teamId");
+                    b.HasIndex("TeamId");
 
                     b.ToTable("substitutions");
                 });
@@ -262,12 +244,9 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("organization_id");
 
-                    b.Property<int?>("organizationId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("organizationId");
+                    b.HasIndex("OrganizationId");
 
                     b.ToTable("teams");
                 });
@@ -297,17 +276,11 @@ namespace ICPCLike.Db.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("team_id");
 
-                    b.Property<int>("contestantId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("teamId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("contestantId");
+                    b.HasIndex("ContestantId");
 
-                    b.HasIndex("teamId");
+                    b.HasIndex("TeamId");
 
                     b.ToTable("team_members");
                 });
@@ -316,13 +289,13 @@ namespace ICPCLike.Db.Migrations
                 {
                     b.HasOne("ICPCLike.Db.Models.Stage", "Stage")
                         .WithMany("Results")
-                        .HasForeignKey("stageId")
+                        .HasForeignKey("StageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ICPCLike.Db.Models.Team", "Team")
                         .WithMany("Results")
-                        .HasForeignKey("teamId")
+                        .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -335,7 +308,7 @@ namespace ICPCLike.Db.Migrations
                 {
                     b.HasOne("ICPCLike.Db.Models.Season", "Season")
                         .WithMany("Stages")
-                        .HasForeignKey("seasonId")
+                        .HasForeignKey("SeasonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -346,19 +319,19 @@ namespace ICPCLike.Db.Migrations
                 {
                     b.HasOne("ICPCLike.Db.Models.Person", "NewContestant")
                         .WithMany()
-                        .HasForeignKey("newContestantId")
+                        .HasForeignKey("NewContestantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ICPCLike.Db.Models.Person", "OldContestant")
                         .WithMany()
-                        .HasForeignKey("oldContestantId")
+                        .HasForeignKey("OldContestantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ICPCLike.Db.Models.Team", "Team")
                         .WithMany()
-                        .HasForeignKey("teamId")
+                        .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -373,7 +346,7 @@ namespace ICPCLike.Db.Migrations
                 {
                     b.HasOne("ICPCLike.Db.Models.Organization", "Organization")
                         .WithMany("Teams")
-                        .HasForeignKey("organizationId");
+                        .HasForeignKey("OrganizationId");
 
                     b.Navigation("Organization");
                 });
@@ -382,13 +355,13 @@ namespace ICPCLike.Db.Migrations
                 {
                     b.HasOne("ICPCLike.Db.Models.Person", "Contestant")
                         .WithMany("TeamMemberships")
-                        .HasForeignKey("contestantId")
+                        .HasForeignKey("ContestantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ICPCLike.Db.Models.Team", "Team")
                         .WithMany("Members")
-                        .HasForeignKey("teamId")
+                        .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
