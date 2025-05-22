@@ -277,5 +277,22 @@ public class StatisticsController(IcpcService service) : ControllerBase
 		return Ok(countries);
 	}
 	
+	[HttpGet("teams/with-substitutions")]
+	public async Task<ActionResult<List<TeamSubstitutionDto>>> GetTeamsWithSubstitutions()
+	{
+		var tuples = await service.GetTeamsWithSubstitutionsPerSeason();
+
+		var result = tuples
+			.Select(t => new TeamSubstitutionDto
+			{
+				TeamName = t.TeamName,
+				SeasonName = t.SeasonName,
+				SubstitutionCount = t.SubstitutionCount
+			})
+			.ToList();
+
+		return Ok(result);
+	}
+	
 	private static PersonDto ToDto(Person p) => new(p);
 }

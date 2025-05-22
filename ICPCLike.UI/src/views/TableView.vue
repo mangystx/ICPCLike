@@ -75,7 +75,30 @@
         </div>
         <div v-else-if="Array.isArray(additionalResult) && additionalResult.length" class="query-result">
             <h2>Результат запиту:</h2>
-            <pre>{{ JSON.stringify(additionalResult, null, 2) }}</pre>
+            <table class="dynamic-table">
+                <thead>
+                    <tr>
+                        <th v-for="(val, key) in additionalResult[0]" :key="key">{{ formatHeader(key) }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(row, idx) in additionalResult" :key="idx">
+                        <td v-for="(val, key) in row" :key="key">
+                            <template v-if="typeof val === 'object' && val !== null">
+                                <table class="nested-table">
+                                    <tr v-for="(v, k) in val" :key="k">
+                                        <th>{{ k }}</th>
+                                        <td>{{ formatValue(v) }}</td>
+                                    </tr>
+                                </table>
+                            </template>
+                            <template v-else>
+                                {{ formatValue(val) }}
+                            </template>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
     </div>
@@ -141,6 +164,18 @@ const inputFields = computed(() => {
 
 function runSelectedQuery() {
     store.runSelectedQuery(selectedQuery.value, inputValues.value)
+}
+
+function formatValue(val: unknown) {
+    if (val instanceof Date) return val.toLocaleDateString('uk-UA')
+    if (typeof val === 'string' && /^\d{4}-\d{2}-\d{2}/.test(val)) return formatDate(val)
+    return val
+}
+
+function formatHeader(key: string) {
+    return key
+        .replace(/([A-Z])/g, ' $1')
+        .replace(/^./, str => str.toUpperCase())
 }
 
 const loading = computed(() => store.loading)

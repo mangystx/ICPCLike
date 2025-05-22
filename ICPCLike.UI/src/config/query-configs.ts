@@ -145,5 +145,10 @@ export const queryConfigs: Record<string, QueryConfig> = {
 		label: "Команди з організаціями (Польща)",
 		method: 'GET',
 		path: 'teams-orgs'
+	},
+	getTeamsWithSubstitutions: {
+		label: "Команди із замінами в одному сезоні",
+		method: 'GET',
+		path: 'teams/with-substitutions'
 	}
 }

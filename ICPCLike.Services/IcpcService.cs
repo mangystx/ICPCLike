@@ -134,11 +134,17 @@ public class IcpcService(IcpcLikeContext context)
 	public async Task<List<NameCountDto>> GetJoinedResults()
 	{
 		return await context.TeamMembers
+			.Include(tm => tm.Team)
+			.ThenInclude(t => t.Results)
+			.ThenInclude(r => r.Stage)
 			.Where(tm => tm.ContestantId != null)
-			.Join(context.Persons,
-				tm => tm.ContestantId,
-				p => p.Id,
-				(tm, p) => new { p.Name })
+			.SelectMany(tm => tm.Team.Results
+				.Where(r =>
+					r.Stage.Date >= tm.JoinDate &&
+					(tm.LeaveDate == null || r.Stage.Date <= tm.LeaveDate)
+				)
+				.Select(r => new { tm.Contestant.Name })
+			)
 			.GroupBy(x => x.Name)
 			.Select(g => new NameCountDto
 			{
@@ -298,5 +304,35 @@ public class IcpcService(IcpcLikeContext context)
 				o => o.Id,
 				(t, o) => new ValueTuple<string, string>(t.Name, o.Name))
 			.ToListAsync();
+	}
+	
+	public async Task<List<(string TeamName, string SeasonName, int SubstitutionCount)>> GetTeamsWithSubstitutionsPerSeason()
+	{
+		var result = await context.Substitutions
+			.Join(context.Seasons,
+				s => true,
+				season => true,
+				(s, season) => new
+				{
+					s.Team.Name,
+					SeasonName = season.Name,
+					s.TeamId,
+					SeasonId = season.Id,
+					season.StartDate,
+					season.EndDate,
+					s.SubstitutionDate
+				}
+			)
+			.Where(x => x.SubstitutionDate >= x.StartDate && x.SubstitutionDate <= x.EndDate)
+			.GroupBy(x => new { x.TeamId, x.SeasonId, x.Name, x.SeasonName })
+			.Where(g => g.Any())
+			.Select(g => new ValueTuple<string, string, int>(
+				g.Key.Name,
+				g.Key.SeasonName,
+				g.Count()
+			))
+			.ToListAsync();
+
+		return result;
 	}
 }

@@ -65,3 +65,10 @@ public class NameCountDto
 	public string Name { get; set; } = string.Empty;
 	public int Count { get; set; }
 }
+
+public class TeamSubstitutionDto
+{
+	public string TeamName { get; set; }
+	public string SeasonName { get; set; }
+	public int SubstitutionCount { get; set; }
+}

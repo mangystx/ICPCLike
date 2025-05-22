@@ -95,7 +95,7 @@ public static class TestData
 				{
 					Team = team,
 					Contestant = m,
-					JoinDate = DateTime.UtcNow.AddMonths(-_rand.Next(12)).Date,
+					JoinDate = DateTime.UtcNow.AddMonths(-_rand.Next(70)).Date,
 					LeaveDate = _rand.NextDouble() < 0.3 ? DateTime.UtcNow.Date : null
 				});
 			}
@@ -131,7 +131,7 @@ public static class TestData
 				Team = team,
 				OldContestant = oldMember,
 				NewContestant = newMember,
-				SubstitutionDate = DateTime.UtcNow.AddDays(-_rand.Next(200)).Date
+				SubstitutionDate = DateTime.UtcNow.AddMonths(-_rand.Next(36)).Date
 			});
 		}
 		context.Substitutions.AddRange(substitutions);
