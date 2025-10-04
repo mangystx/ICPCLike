@@ -18,7 +18,7 @@ export const queryConfigs: Record<string, QueryConfig> = {
 		path: 'participants/between',
 		params: ['from', 'to']
 	},
-	getParticipantsByCountries: {
+	getParticipantsByCountries: {	
 		label: "Учасники з вказаних країн",
 		method: 'POST',
 		path: 'participants/by-countries',
