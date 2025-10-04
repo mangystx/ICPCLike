@@ -1,0 +1,11 @@
+/// \defgroup Controllers Контролери
+/// Ендпоїнти ASP.NET Core.
+
+/// \defgroup Services Сервіси
+/// Бізнес-логіка/запити EF Core.
+
+/// \defgroup Models Моделі
+/// Сутності БД (EF Core).
+
+/// \defgroup DTO DTO
+/// Об’єкти передачі даних для API.

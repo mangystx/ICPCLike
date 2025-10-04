@@ -1,0 +1,13 @@
+/// \mainpage ICPCLike — документація
+/// \section intro Вступ
+/// Це API та моделі ICPC-подібної системи: контролери, сервіси, моделі БД і DTO.
+/// 
+/// \section groups Групи
+/// - \ref Controllers
+/// - \ref Services
+/// - \ref Models
+/// - \ref DTO
+///
+/// \section build Збірка
+/// Запуск локально: \code doxygen Doxyfile \endcode
+/// Результат: docs/_build/html/index.html

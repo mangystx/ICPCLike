@@ -1,0 +1,44 @@
+# Базове
+PROJECT_NAME           = "ICPCLike"
+OPTIMIZE_OUTPUT_FOR_CSHARP = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+
+# Вхідні файли
+INPUT                  = ../
+FILE_PATTERNS          = *.cs
+RECURSIVE              = YES
+
+# Групи (Controllers/Models/DTO/Services — ми вже використовуємо \ingroup)
+ENABLE_PREPROCESSING   = YES
+EXTRACT_PACKAGE        = YES
+SUBGROUPING            = YES
+DISTRIBUTE_GROUP_DOC   = YES
+
+# Вивід
+OUTPUT_DIRECTORY       = ./_build
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO        # Увімкни YES, якщо потрібен PDF (див. крок 6)
+GENERATE_TREEVIEW      = YES
+
+# Діаграми
+HAVE_DOT               = YES
+DOT_PATH               =
+DOT_GRAPH_MAX_NODES    = 100
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+TEMPLATE_RELATIONS     = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+
+# Попередження
+WARN_AS_ERROR          = NO
+WARN_IF_UNDOCUMENTED   = NO
+WARN_LOGFILE           = ./doxygen_warnings.log
+
+# Кодування/стилі
+ALIASES                += "ingroup=\ingroup "
