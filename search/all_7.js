@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['icpcid_0',['IcpcId',['../classICPCLike_1_1Db_1_1Models_1_1Person.html#a31d8d4661f777e49e0797283e3c3f048',1,'ICPCLike::Db::Models::Person']]],
+  ['icpclike_1',['icpclike',['../namespaceICPCLIke.html',1,'ICPCLIke'],['../namespaceICPCLike.html',1,'ICPCLike']]],
+  ['icpclike_3a_3acontrollers_2',['Controllers',['../namespaceICPCLike_1_1Controllers.html',1,'ICPCLike']]],
+  ['icpclike_3a_3adb_3',['Db',['../namespaceICPCLike_1_1Db.html',1,'ICPCLike']]],
+  ['icpclike_3a_3adb_3a_3acontext_4',['Context',['../namespaceICPCLike_1_1Db_1_1Context.html',1,'ICPCLike::Db']]],
+  ['icpclike_3a_3adb_3a_3amigrations_5',['Migrations',['../namespaceICPCLike_1_1Db_1_1Migrations.html',1,'ICPCLike::Db']]],
+  ['icpclike_3a_3adb_3a_3amodels_6',['Models',['../namespaceICPCLike_1_1Db_1_1Models.html',1,'ICPCLike::Db']]],
+  ['icpclike_3a_3aservices_7',['icpclike::services',['../namespaceICPCLike_1_1Services.html',1,'ICPCLike.Services'],['../namespaceICPCLIke_1_1Services.html',1,'ICPCLIke.Services']]],
+  ['icpclikecontext_8',['icpclikecontext',['../classICPCLike_1_1Db_1_1Context_1_1IcpcLikeContext.html#a832a688eb68bd5a81eee8cf0e8b6a1d0',1,'ICPCLike.Db.Context.IcpcLikeContext.IcpcLikeContext()'],['../classICPCLike_1_1Db_1_1Context_1_1IcpcLikeContext.html',1,'ICPCLike.Db.Context.IcpcLikeContext']]],
+  ['icpclikecontext_2ecs_9',['IcpcLikeContext.cs',['../IcpcLikeContext_8cs.html',1,'']]],
+  ['icpclikecontextfactory_10',['IcpcLikeContextFactory',['../classICPCLike_1_1Db_1_1Context_1_1IcpcLikeContextFactory.html',1,'ICPCLike::Db::Context']]],
+  ['icpclikecontextfactory_2ecs_11',['IcpcLikeContextFactory.cs',['../IcpcLikeContextFactory_8cs.html',1,'']]],
+  ['icpclikecontextmodelsnapshot_12',['IcpcLikeContextModelSnapshot',['../classICPCLike_1_1Db_1_1Migrations_1_1IcpcLikeContextModelSnapshot.html',1,'ICPCLike::Db::Migrations']]],
+  ['icpclikecontextmodelsnapshot_2ecs_13',['IcpcLikeContextModelSnapshot.cs',['../IcpcLikeContextModelSnapshot_8cs.html',1,'']]],
+  ['icpcservice_14',['IcpcService',['../namespaceICPCLike_1_1Services.html#a995fe15116fd9b69eaffded5a4a72aa0',1,'ICPCLike::Services']]],
+  ['icpcservice_2ecs_15',['IcpcService.cs',['../IcpcService_8cs.html',1,'']]],
+  ['id_16',['id',['../classICPCLike_1_1Db_1_1Models_1_1Organization.html#a3d65ba0ccf7f74c082fd5f40eeadc70f',1,'ICPCLike.Db.Models.Organization.Id'],['../classICPCLike_1_1Db_1_1Models_1_1Person.html#a5058771a5ad9fdf10725308e3f91106b',1,'ICPCLike.Db.Models.Person.Id'],['../classICPCLike_1_1Db_1_1Models_1_1Result.html#a6f5690e59cc9dc66aeed2cffa0bd76b9',1,'ICPCLike.Db.Models.Result.Id'],['../classICPCLike_1_1Db_1_1Models_1_1Season.html#aa579d29dba7feffb33d015bf954df48b',1,'ICPCLike.Db.Models.Season.Id'],['../classICPCLike_1_1Db_1_1Models_1_1Stage.html#af65dab811b59db446dc15a7c1a6fbd52',1,'ICPCLike.Db.Models.Stage.Id'],['../classICPCLike_1_1Db_1_1Models_1_1Substitution.html#a4f7bb90e564f1912c8ffb828d30b2ab6',1,'ICPCLike.Db.Models.Substitution.Id'],['../classICPCLike_1_1Db_1_1Models_1_1Team.html#aa05ab2b5cee463933b163ca552f3480a',1,'ICPCLike.Db.Models.Team.Id'],['../classICPCLike_1_1Db_1_1Models_1_1TeamMember.html#aac0b4e464c96e9555dcdeb32c4467bc1',1,'ICPCLike.Db.Models.TeamMember.Id']]],
+  ['if_17',['if',['../Program_8cs.html#a79a944c7f0e25196ca3c5a8638b919b9',1,'Program.cs']]],
+  ['init_18',['Init',['../classICPCLike_1_1Db_1_1Migrations_1_1Init.html',1,'ICPCLike::Db::Migrations']]]
+];

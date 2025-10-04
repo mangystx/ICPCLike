@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['team_0',['team',['../classICPCLike_1_1Db_1_1Models_1_1Team.html',1,'ICPCLike.Db.Models.Team'],['../classICPCLIke_1_1Services_1_1ParticipantResultDto.html#abfe515c7d9486056b5e616085f420155',1,'ICPCLIke.Services.ParticipantResultDto.Team'],['../classICPCLike_1_1Db_1_1Models_1_1TeamMember.html#ad4621629fd174a3796b2da66bb37f22e',1,'ICPCLike.Db.Models.TeamMember.Team'],['../classICPCLike_1_1Db_1_1Models_1_1Substitution.html#a6456e0d8487b9d82455676cd37a50d37',1,'ICPCLike.Db.Models.Substitution.Team'],['../classICPCLike_1_1Db_1_1Models_1_1Result.html#a7224e3e87384536050626018d80e525d',1,'ICPCLike.Db.Models.Result.Team']]],
+  ['team_2ecs_1',['Team.cs',['../Team_8cs.html',1,'']]],
+  ['teamaveragesolveddto_2',['TeamAverageSolvedDto',['../classICPCLIke_1_1Services_1_1TeamAverageSolvedDto.html',1,'ICPCLIke::Services']]],
+  ['teamhighpenaltydto_3',['TeamHighPenaltyDto',['../classICPCLIke_1_1Services_1_1TeamHighPenaltyDto.html',1,'ICPCLIke::Services']]],
+  ['teamid_4',['teamid',['../classICPCLike_1_1Db_1_1Models_1_1Result.html#a1adec19650b986170b1cf821c51e8209',1,'ICPCLike.Db.Models.Result.TeamId'],['../classICPCLike_1_1Db_1_1Models_1_1TeamMember.html#ad7e8951ffbbba0d8cb40e3b75611d30a',1,'ICPCLike.Db.Models.TeamMember.TeamId'],['../classICPCLike_1_1Db_1_1Models_1_1Substitution.html#a21b929ce897116a7eb74630da5c8c3d4',1,'ICPCLike.Db.Models.Substitution.TeamId']]],
+  ['teammember_5',['TeamMember',['../classICPCLike_1_1Db_1_1Models_1_1TeamMember.html',1,'ICPCLike::Db::Models']]],
+  ['teammember_2ecs_6',['TeamMember.cs',['../TeamMember_8cs.html',1,'']]],
+  ['teammembers_7',['TeamMembers',['../classICPCLike_1_1Db_1_1Context_1_1IcpcLikeContext.html#ae14b57a1984bc933e2978cc801071d3f',1,'ICPCLike::Db::Context::IcpcLikeContext']]],
+  ['teammemberships_8',['TeamMemberships',['../classICPCLike_1_1Db_1_1Models_1_1Person.html#af28af696eb6ccf76e23010c62e6c4e9c',1,'ICPCLike::Db::Models::Person']]],
+  ['teamname_9',['teamname',['../classICPCLIke_1_1Services_1_1ParticipantWithTeamDto.html#ac071a2f77f9fb243b547cc4bad09fae8',1,'ICPCLIke.Services.ParticipantWithTeamDto.TeamName'],['../classICPCLIke_1_1Services_1_1TeamSubstitutionDto.html#ad2ac42ef61044be3aa5f9c6c3a7b040c',1,'ICPCLIke.Services.TeamSubstitutionDto.TeamName'],['../classICPCLIke_1_1Services_1_1TeamWithOrgDto.html#af46035141e258597ca83963d77b7be6f',1,'ICPCLIke.Services.TeamWithOrgDto.TeamName'],['../classICPCLIke_1_1Services_1_1TeamHighPenaltyDto.html#a4a43671c50e45d6d787ded24c03827d4',1,'ICPCLIke.Services.TeamHighPenaltyDto.TeamName'],['../classICPCLIke_1_1Services_1_1TeamAverageSolvedDto.html#ac48a2eb370dda054934f216eb04ef5ba',1,'ICPCLIke.Services.TeamAverageSolvedDto.TeamName'],['../classICPCLIke_1_1Services_1_1TeamResultsCountDto.html#afb9d8b95b2ca7238400dd8498bdedc30',1,'ICPCLIke.Services.TeamResultsCountDto.TeamName']]],
+  ['teamresultscountdto_10',['TeamResultsCountDto',['../classICPCLIke_1_1Services_1_1TeamResultsCountDto.html',1,'ICPCLIke::Services']]],
+  ['teams_11',['teams',['../classICPCLike_1_1Db_1_1Context_1_1IcpcLikeContext.html#a9b2d8c7737d35944ff38f6d3e91013c9',1,'ICPCLike.Db.Context.IcpcLikeContext.Teams'],['../classICPCLike_1_1Db_1_1Models_1_1Organization.html#ae0c17d976609d928fd3bbc896e0fc979',1,'ICPCLike.Db.Models.Organization.Teams']]],
+  ['teamsubstitutiondto_12',['TeamSubstitutionDto',['../classICPCLIke_1_1Services_1_1TeamSubstitutionDto.html',1,'ICPCLIke::Services']]],
+  ['teamwithorgdto_13',['TeamWithOrgDto',['../classICPCLIke_1_1Services_1_1TeamWithOrgDto.html',1,'ICPCLIke::Services']]],
+  ['testdata_14',['TestData',['../classICPCLike_1_1Db_1_1TestData.html',1,'ICPCLike::Db']]],
+  ['testdata_2ecs_15',['TestData.cs',['../TestData_8cs.html',1,'']]],
+  ['title_16',['Title',['../classICPCLike_1_1Db_1_1Models_1_1Person.html#a99703fa389bb4e2648c0a640e2d1df09',1,'ICPCLike::Db::Models::Person']]],
+  ['totalpenalty_17',['TotalPenalty',['../classICPCLIke_1_1Services_1_1TeamHighPenaltyDto.html#a48c0ef9e702e7c325cd3365f6556a471',1,'ICPCLIke::Services::TeamHighPenaltyDto']]],
+  ['totalsolved_18',['TotalSolved',['../classICPCLIke_1_1Services_1_1SeasonSolvedDto.html#a17e0e9bc64a88f3257975f4e60a60cfc',1,'ICPCLIke::Services::SeasonSolvedDto']]]
+];
